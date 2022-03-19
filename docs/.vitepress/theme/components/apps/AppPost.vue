@@ -1,9 +1,25 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useData } from 'vitepress'
+import { useHead } from '@vueuse/head'
+import { replaceMdToHtml } from '../../utils/markdown'
+import { createAbsoletePath, useMetaOGP } from '../../composables/Meta'
 
 const data = useData()
-const title =data.title.value.split(' | ')[0] 
+const title = data.title.value.split(' | ')[0] 
+const fm = data.frontmatter.value
+
+const ogp = useMetaOGP({
+  title: data.title.value,
+  description: fm.description,
+  url: createAbsoletePath(replaceMdToHtml(data.page.value.relativePath)),
+  image: createAbsoletePath(fm?.image ?? ''),
+  type: 'article'
+})
+
+const head = useHead({
+  ...ogp
+})
 </script>
 
 <template>

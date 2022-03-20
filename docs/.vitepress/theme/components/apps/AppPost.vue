@@ -6,8 +6,8 @@ import { replaceMdToHtml } from '../../utils/markdown'
 import { createAbsoletePath, useMetaOGP } from '../../composables/Meta'
 
 const data = useData()
-const title = data.title.value.split(' | ')[0] 
 const fm = data.frontmatter.value
+const title = data.title.value.split(' | ')[0] 
 
 const ogp = useMetaOGP({
   title: data.title.value,

@@ -1,6 +1,8 @@
 ---
 type: Post
 title: Add a new layout file
+description: How you should do to add a new layout file.
+image: /image/default.png
 ---
 
 ## What you do when you want to add a new layout file

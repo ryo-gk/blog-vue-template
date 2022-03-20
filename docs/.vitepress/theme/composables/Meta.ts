@@ -25,7 +25,7 @@ export function useMetaOGP(options: OGPOptions): HeadObject {
       { name: 'twitter:card', content: 'summary' }
     ],
     htmlAttrs: {
-      prefix: 'og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#'
+      prefix: `og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# ${options.type}: http://ogp.me/ns/${options.type}#`
     }
   }
   return head

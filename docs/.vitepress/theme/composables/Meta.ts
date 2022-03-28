@@ -32,7 +32,7 @@ export function useMetaOGP(options: OGPOptions): HeadObject {
 }
 
 export function createAbsoletePath(relativePath: string) {
-  return location.origin + withBase(relativePath)
+  return withBase(relativePath)
 }
 
 export function extractSiteTitle(title: Ref<string>) {

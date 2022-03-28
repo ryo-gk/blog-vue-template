@@ -1,6 +1,8 @@
 ---
 type: Post
 title: How I use this template?
+description: How to use this template.
+image: /image/default.png
 ---
 
 ## What is this?
